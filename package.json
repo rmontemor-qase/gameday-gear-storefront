@@ -1,0 +1,13 @@
+{
+  "name": "gameday-gear-storefront",
+  "version": "3.7.0",
+  "private": true,
+  "description": "GameDay Gear storefront — catalogue, cart, and order pricing",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
