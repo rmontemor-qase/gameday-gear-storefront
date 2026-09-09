@@ -1,0 +1,33 @@
+package.json
+  s_19e47c4fbaebc2::t_cb60b39c34ecb4 1-13
+src/lib/cart.ts
+  s_19e47c4fbaebc2::t_7878aa1d9b4d24 1-54
+src/components/CartSummary.tsx
+  s_19e47c4fbaebc2::t_899b75018ce409 1-37
+src/data/products.ts
+  s_19e47c4fbaebc2::t_1b9e574ca223b2 1-25
+src/lib/pricing.ts
+  s_19e47c4fbaebc2::t_0ea9548a84ae00 1-37
+README.md
+  s_19e47c4fbaebc2::t_45f7becea36562 1-23
+tsconfig.json
+  s_19e47c4fbaebc2::t_6ba1cbf39cf410 1-13
+.gitignore
+  s_19e47c4fbaebc2::t_cd6b640277919b 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "26e5813a49dcf0f6e132ba1bcb23d185f2a27dfd",
+  "prompts": {},
+  "sessions": {
+    "s_19e47c4fbaebc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "69b2df35-517a-4432-b1c3-298493c0b270",
+        "model": "claude-opus-5"
+      },
+      "human_author": "rmontemor-qase <rmontemor@qase.io>"
+    }
+  }
+}
