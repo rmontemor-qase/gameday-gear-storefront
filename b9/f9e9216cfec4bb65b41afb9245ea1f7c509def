@@ -1,0 +1,22 @@
+src/lib/pricing.ts
+  s_19e47c4fbaebc2::t_bfd9c51c080016 3,6-8,13-14,22-23,28,35-45
+src/components/CartSummary.tsx
+  s_19e47c4fbaebc2::t_14fe9ac6e13d0e 10-11,22-24,30-40
+  s_19e47c4fbaebc2::t_deae81cfda83b8 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b9f9e9216cfec4bb65b41afb9245ea1f7c509def",
+  "prompts": {},
+  "sessions": {
+    "s_19e47c4fbaebc2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "69b2df35-517a-4432-b1c3-298493c0b270",
+        "model": "claude-opus-5"
+      },
+      "human_author": "rmontemor-qase <rmontemor@qase.io>"
+    }
+  }
+}
