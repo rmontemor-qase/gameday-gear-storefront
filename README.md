@@ -9,7 +9,8 @@ catalogue, cart, and order pricing.
 | --- | --- |
 | `src/data/products.ts` | Product catalogue. Prices are in credits. |
 | `src/lib/cart.ts` | Cart line management — add, remove, quantity. |
-| `src/lib/pricing.ts` | Subtotal, shipping, and total calculation. |
+| `src/lib/pricing.ts` | Subtotal, discount, shipping, and total calculation. |
+| `src/lib/promo.ts` | Promo codes and their rules. |
 | `src/components/CartSummary.tsx` | Order summary panel on the cart page. |
 
 ## Testing
