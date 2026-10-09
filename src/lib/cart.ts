@@ -10,10 +10,6 @@ export interface CartLine {
 export const MAX_QUANTITY_PER_LINE = 10;
 
 export function addToCart(lines: CartLine[], productId: string, quantity = 1): CartLine[] {
-  const product = findProduct(productId);
-  if (!product) throw new Error(`Unknown product: ${productId}`);
-  if (!product.inStock) throw new Error(`Product is out of stock: ${productId}`);
-
   const existing = lines.find((line) => line.productId === productId);
   if (existing) {
     return lines.map((line) =>
@@ -23,6 +19,7 @@ export function addToCart(lines: CartLine[], productId: string, quantity = 1): C
     );
   }
 
+  const product = requireSellable(productId);
   return [
     ...lines,
     {
@@ -32,6 +29,14 @@ export function addToCart(lines: CartLine[], productId: string, quantity = 1): C
       quantity: clampQuantity(quantity),
     },
   ];
+}
+
+/** Looks up a product and rejects unknown or out-of-stock items. */
+function requireSellable(productId: string) {
+  const product = findProduct(productId);
+  if (!product) throw new Error(`Unknown product: ${productId}`);
+  if (!product.inStock) throw new Error(`Product is out of stock: ${productId}`);
+  return product;
 }
 
 export function setQuantity(lines: CartLine[], productId: string, quantity: number): CartLine[] {
