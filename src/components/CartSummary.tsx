@@ -7,7 +7,8 @@ interface CartSummaryProps {
 }
 
 export function CartSummary({ lines, onCheckout }: CartSummaryProps) {
-  const { subtotal, shipping, total } = summarize(lines);
+  const { subtotal, shipping, total, qualifiesForFreeShipping, creditsToFreeShipping } =
+    summarize(lines);
 
   return (
     <aside className="order-summary" data-testid="order-summary">
@@ -18,11 +19,25 @@ export function CartSummary({ lines, onCheckout }: CartSummaryProps) {
         <dd data-testid="summary-subtotal">{formatCredits(subtotal)}</dd>
 
         <dt>Shipping</dt>
-        <dd data-testid="summary-shipping">{formatCredits(shipping)}</dd>
+        <dd data-testid="summary-shipping">
+          {qualifiesForFreeShipping ? "FREE" : formatCredits(shipping)}
+        </dd>
 
         <dt>Total</dt>
         <dd data-testid="summary-total">{formatCredits(total)}</dd>
       </dl>
+
+      {lines.length > 0 && !qualifiesForFreeShipping && (
+        <p className="free-shipping-hint" data-testid="free-shipping-hint">
+          Add {formatCredits(creditsToFreeShipping)} more to qualify for free shipping.
+        </p>
+      )}
+
+      {qualifiesForFreeShipping && (
+        <p className="free-shipping-banner" data-testid="free-shipping-banner">
+          Your order qualifies for free shipping.
+        </p>
+      )}
 
       <button
         type="button"
